@@ -1,0 +1,99 @@
+use  `project_customer_segmentation`;
+--- 1.How is the shopping distribution according to gender?
+select gender ,count(invoice_no) as transactions from customer
+group by gender 
+order  by transactions desc ;
+;
+-- 2.Which gender did we sell more products to?
+
+select gender ,sum(quantity) as total_quantity from customer
+group by gender 
+order by total_quantity desc;
+
+-- 3.Which gender generated more revenue?
+select gender,sum(quantity*price) as revenue from customer
+group by gender
+order by revenue desc;
+ 
+ -- 4.Distribution of purchase categories relative to other columns?
+  
+  select category,
+  gender,
+  count(invoice_no) as transactions,
+  sum(quantity) as total_products,
+  sum(price*quantity) as revenue,
+  (sum(quantity*price)/(select sum(price*quantity) from customer))*100 
+  as revenue_percentage
+  from customer
+  group by category,gender
+  order by revenue desc;
+  
+  -- 5.How is the shopping distribution according to age?
+  select 
+  case 
+  when age <19 then 'teen'
+  when age between 20 and 30 then 'adult'
+  when age between 31 and 45 then 'mid age'
+  when age between 46 and 65 then 'pre-senior'
+  else 'seniors' end as age_groups,count(invoice_no) as transactions from 
+  customer
+  group by age_groups
+  order by  transactions desc;
+  
+ --  6.Which age cat did we sell more products to?
+ select category,
+ case 
+  when age <19 then 'teen'
+  when age between 20 and 30 then 'adult'
+  when age between 31 and 45 then 'mid age'
+  when age between 46 and 65 then 'pre-senior'
+  else 'seniors' end as age_groups,
+  sum(quantity) as total_products
+  from customer
+  group by category,age_groups
+  order by total_products desc;
+  
+  -- 7.Which age cat generated more revenue?
+  select 
+  case 
+  when age <19 then 'teen'
+  when age between 20 and 30 then 'adult'
+  when age between 31 and 45 then 'mid age'
+  when age between 46 and 65 then 'pre-senior'
+  else 'seniors' end as age_groups,
+  category,sum(quantity*price) as revenue
+  from customer
+  group by age_groups,category
+  order by revenue desc;
+  
+  -- 8.Distribution of purchase categories relative to other columns?
+  SELECT 
+    category,
+    gender,
+    COUNT(*) AS total_transactions,
+    SUM(quantity) AS total_quantity,
+    SUM(price * quantity) AS total_revenue
+FROM customer
+GROUP BY category, gender
+ORDER BY category, total_revenue DESC;
+
+-- 9.Does the payment method have a relation with other columns?
+
+SELECT 
+    payment_method,
+    gender,
+    COUNT(*) AS total_transactions,
+    SUM(price * quantity) AS total_revenue
+FROM customer
+GROUP BY payment_method, gender
+ORDER BY payment_method, total_revenue DESC;
+
+-- 10.How is the distribution of the payment method?
+
+SELECT 
+    payment_method,
+    COUNT(*) AS total_transactions,
+    ROUND((COUNT(*) * 100.0 / (SELECT COUNT(*) FROM customer)), 2) AS percentage_share
+FROM customer
+GROUP BY payment_method
+ORDER BY total_transactions DESC;
