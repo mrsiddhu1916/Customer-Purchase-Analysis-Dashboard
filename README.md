@@ -42,4 +42,38 @@ The dataset includes shopping information from **10 shopping malls** and multipl
 🔟 **How is the distribution of the payment method?**
 
 ---
+## 📊 Key Insights
+- Female customers accounted for **~60%** of total sales and generated higher revenue.  
+- **Senior (51+)** customers contributed the highest sales volume and revenue.  
+- **Clothing** was the top-selling category, followed by **Shoes** and **Technology**.  
+- **Cash payments** dominated at 45%, while **credit card** usage is steadily increasing.  
+- **Shopping malls in urban areas** had higher purchase frequency.
+
+---
+## 💡 Business Recommendations
+- Focus marketing efforts on **female** and **senior** segments.  
+- Launch **cashback/loyalty programs** to encourage digital payments.  
+- Strengthen promotions in **clothing** and **technology** categories.  
+- Use **data-driven targeting** for better customer retention.
+
+---
+## 🎨 Dashboard Theme
+- **Theme:** Peach/Pink Corporate  
+- **Background Color:** `#FFF2F0`  
+- **Title Color:** `#78283C`  
+- **KPI Colors:** Coral Pink `#FF6F61`, Gold `#F4B942`, Light Blue `#A0C4FF`  
+
+---
+
+## 🏁 Conclusion
+This project provides a complete **Customer Purchase Behavior Analysis** using Excel and SQL and Power BI.  
+It helps businesses understand demographic patterns, optimize product offerings, and improve marketing strategies based on real data insights.
+
+---
+
+## 📂 Author
+**Siddardha Kamepalli**  
+_Data Analyst | SQL | Power BI | Python | Excel_
+
+
 
