@@ -101,6 +101,8 @@ It helps businesses understand demographic patterns, optimize product offerings,
 ## 📂 Author
 **Siddardha Kamepalli**  
 _Data Analyst | SQL | Power BI | Python | Excel_
+LinkedIn: https://www.linkedin.com/in/siddardh-kamepalli-563420355
+ 
 
 
 
