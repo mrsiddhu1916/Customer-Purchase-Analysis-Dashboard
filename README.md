@@ -95,6 +95,9 @@ It helps businesses understand demographic patterns, optimize product offerings,
 
 ---
 
+- Dashboard Interactive <a href="https://github.com/mrsiddhu1916/Customer-Purchase-Analysis-Dashboard/blob/main/Customer%20Purchase%20Analysis%20Dashboard.pbix" >View Dashboard<a/a>
+
+
 ## 📂 Author
 **Siddardha Kamepalli**  
 _Data Analyst | SQL | Power BI | Python | Excel_
