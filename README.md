@@ -44,6 +44,28 @@ The dataset includes shopping information from **10 shopping malls** and multipl
 🔟 **How is the distribution of the payment method?**
 
 ---
+
+## 📈 Key Performance Indicators (KPIs)
+
+The following KPIs were designed to measure overall shopping performance, customer demographics, and revenue contribution across malls, genders, and age groups.
+
+| KPI | Description | Formula / Metric | Example Result |
+|------|--------------|------------------|----------------|
+| 🧾 **Total Transactions** | Total number of invoices or sales transactions | COUNT(invoice_no) | 99.46K |
+| 👥 **Total Customers** | Unique customers who made at least one purchase | COUNT(DISTINCT customer_id) | 99.46K |
+| 📦 **Total Quantity Sold** | Total items purchased across all transactions | SUM(quantity) | 298.71K |
+| 💰 **Total Revenue** | Total revenue generated from all sales | SUM(price * quantity) | ₺251.51M |
+| 👩‍🦰 **Female Contribution %** | Revenue share from female customers | (Female Revenue / Total Revenue) * 100 | 59.7% |
+| 👨 **Male Contribution %** | Revenue share from male customers | (Male Revenue / Total Revenue) * 100 | 40.3% |
+| 👵 **Top Age Group by Revenue** | Age group contributing the most revenue | Age category with MAX(SUM(price * quantity)) | 51+ (₺91M) |
+| 👕 **Top Product Category** | Category with the highest total revenue | Category with MAX(SUM(price * quantity)) | Clothing (₺114.9M) |
+| 💳 **Top Payment Method** | Most used payment type | Payment method with MAX(COUNT(*)) | Cash (45%) |
+| 🏬 **Top Performing Mall** | Mall generating the highest sales | Shopping mall with MAX(SUM(price * quantity)) | Mall A (₺38M) |
+
+---
+## Dataset Used
+
+
 ## 📊 Key Insights
 - Female customers accounted for **~60%** of total sales and generated higher revenue.  
 - **Senior (51+)** customers contributed the highest sales volume and revenue.  
