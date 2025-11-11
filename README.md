@@ -64,7 +64,7 @@ The following KPIs were designed to measure overall shopping performance, custom
 
 ---
 ## Dataset Used
-
+- <a href="https://github.com/mrsiddhu1916/Customer-Purchase-Analysis-Dashboard/blob/main/Customer_Data.csv" >Dataset</a>
 
 ## 📊 Key Insights
 - Female customers accounted for **~60%** of total sales and generated higher revenue.  
